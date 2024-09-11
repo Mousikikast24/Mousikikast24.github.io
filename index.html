@@ -123,14 +123,14 @@
         <div class="contact-info">
           <div class="contact-info-detail">Area, Fourka, Καστοριά 521 00</div>
           <div class="contact-info-detail">Email</div>
-          <button class="contact-info-detail" onClick="copy()" id="email">mofkastorias@gmail.com</button>
-            <div class="contact-info-detail">Social</div>
-            <div class="social-icons">
-              <a href="https://www.instagram.com/mousiki_kastorias?igsh=MXZteWo1MjZraTVjNw==">
-                <span class="social-icon"><i class="fab fa-instagram"></i></span>
-                <a href="https://mousikikast24.github.io/" class="social-icon"><i class="fab fa-facebook"></i></a>
-              </a>
-            </div>
+          <p class="contact-info-detail" onClick="copy()" id="email">mofkastorias@gmail.com</p>
+          <div class="contact-info-detail">Social</div>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/mousiki_kastorias?igsh=MXZteWo1MjZraTVjNw==">
+              <span class="social-icon"><i class="fab fa-instagram"></i></span>
+              <a href="https://mousikikast24.github.io/" class="social-icon"><i class="fab fa-facebook"></i></a>
+            </a>
+          </div>
         </div>
 
         <!-- Powered By -->
@@ -158,7 +158,7 @@
         document.querySelector(this.getAttribute('href')).scrollIntoView({
           behavior: 'smooth'
         });
-        
+
         // Close sidebar on mobile after clicking a link
         sidebar.classList.add('-translate-x-full');
       });
@@ -171,24 +171,8 @@
     menuToggle.addEventListener('click', () => {
       sidebar.classList.toggle('-translate-x-full');
     });
-
-    function copy() {
-      // Get the text field
-      var copyText = document.getElementById("email");
-
-      // Select the text field
-      copyText.select();
-      copyText.setSelectionRange(0, 99999); // For mobile devices
-
-      // Copy the text inside the text field
-      navigator.clipboard.writeText(copyText.value);
-
-      // Alert the copied text
-      alert("Copied the text: " + copyText.value);
-    } 
   </script>
 
 </body>
 
 </html>
-

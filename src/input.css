@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Footer */
+.bg-custom-dark {
+  @apply bg-[#1d1d33]; /* Custom dark background color */
+}
+
+.text-custom-white {
+  @apply text-white; /* White text color */
+}
+
+.text-custom-pink {
+  @apply text-pink-500; /* Pink text color */
+}
+
+.font-handwriting {
+  font-family: 'Pacifico', cursive; /* Use a handwriting style font */
+}
+
+.custom-logo-font {
+  @apply text-5xl font-handwriting text-custom-pink; /* Custom font size for the logo text */
+}
+
+.custom-subtitle-font {
+  @apply text-sm text-custom-white mt-2; /* Smaller text for the subtitle */
+}
+
+.info-section {
+  @apply text-center text-custom-white mt-12; /* Center-aligned text with margin-top */
+}
+
+.contact-info {
+  @apply text-center mt-8; /* Center text with margin-top */
+}
+
+.contact-info-title {
+  @apply font-semibold mt-4 text-lg; /* Bold font for titles */
+}
+
+.contact-info-detail {
+  @apply text-white mt-1; /* Regular font for details */
+}
+
+.social-icons {
+  @apply text-center mt-4; /* Social icons alignment */
+}
+
+.social-icon {
+  @apply inline-block text-3xl mx-2 text-custom-white; /* Social icon size and margin */
+}
+
+.footer-credits {
+  @apply text-center text-xs text-custom-white mt-12; /* Footer credits styling */
+}
+
+.powered-by-section {
+  @apply text-center mt-12; /* 'Powered by' section styling */
+}
+
+.university-logo {
+  @apply mx-auto w-24 h-auto mt-4; /* Logo size and margin */
+}
+
+.omada-logo {
+  @apply mx-auto w-28 h-28 mt-4 rounded-full; /* Logo size and margin */
+}

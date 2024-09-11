@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Group</title>
+  <link href="public/output.css" rel="stylesheet">
+  <!-- Include Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="scroll-smooth">
+
+  <!-- Mobile Navigation Toggle Button -->
+  <div class="fixed top-0 left-0 p-4 z-50 md:hidden">
+    <button id="menu-toggle"
+      class="text-white bg-gray-800 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-600">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+
+  <!-- Sidebar Navigation -->
+  <aside id="sidebar"
+    class="fixed top-0 left-0 h-screen w-full md:w-64 bg-custom-dark text-white flex flex-col transform -translate-x-full md:translate-x-0 transition-transform duration-300 z-50 md:z-40">
+    <!-- Logo -->
+    <div class="text-center p-4 font-bold text-xl">
+      Μουσική Ομάδα
+    </div>
+
+    <!-- Navigation Links -->
+    <nav class="flex flex-col p-4 space-y-6">
+      <a href="#home" class="text-lg font-semibold hover:text-gray-400">Home</a>
+      <a href="#about" class="text-lg font-semibold hover:text-gray-400">Για εμάς</a>
+      <a href="#team" class="text-lg font-semibold hover:text-gray-400">Η ομάδα μας</a>
+      <a href="#contact" class="text-lg font-semibold hover:text-gray-400">Eπικοινωνία</a>
+    </nav>
+
+
+    <!-- Social Icons -->
+    <div class="mt-auto p-4">
+      <!--<img class="omada-logo" src="public/omada_logo.jpg" /> TODO-->
+      <div class="flex justify-center space-x-4">
+        <a href="https://www.instagram.com/mousiki_kastorias?igsh=MXZteWo1MjZraTVjNw==" class="hover:text-gray-400"><i
+            class="fab fa-instagram"></i></a>
+        <a href="#" class="hover:text-gray-400"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="transition-all duration-300 ml-0 md:ml-64">
+    <!-- Section with full image -->
+    <div id="home" class="relative w-full h-screen md:h-auto overflow-hidden">
+      <img src="public/1.png" alt="Description of the image" class="w-full h-full object-cover">
+    </div>
+
+    <!-- About Us Section (ΓΙΑ ΕΜΑΣ) -->
+    <section id="about" class="bg-gray-100 flex items-center justify-center min-h-screen">
+      <div class="max-w-2xl mx-auto p-4 text-center">
+        <!-- Heading -->
+        <h1 class="text-4xl font-bold mb-8">ΓΙΑ ΕΜΑΣ</h1>
+
+        <!-- Paragraph -->
+        <p class="text-lg leading-relaxed text-justify">
+          Η Μουσική Ομάδα Καστοριάς ιδρύθηκε τον Οκτώβριο του 2023. Δημιουργήθηκε με αγάπη και μεράκι, με την ελπίδα
+          να φέρει κοντά τους φοιτητές όλων των τμημάτων του Πανεπιστημίου που ασχολούνται με την μουσική, κι όχι
+          μόνο. Κύριος στόχος της είναι ο εμπλουτισμός γνώσεων, η όξυνση της μουσικής αντίληψης και η εξερεύνηση
+          διαφόρων ειδών μουσικής, ούτως ώστε κάθε μέλος της να μπορέσει να φέρει στην επιφάνεια όλες τις
+          καλλιτεχνικές πτυχές που κρύβει μέσα του. Αυτό μπορεί να επιτευχθεί μόνο μέσα σε ένα ευχάριστο,
+          υποστηρικτικό, αρμονικό και συνεργατικό περιβάλλον, το οποίο αποτελεί και το κύριο θεμέλιο της ομάδας μας.
+        </p>
+      </div>
+    </section>
+
+    <!-- Our Team Section (Η ΟΜΑΔΑ ΜΑΣ) -->
+    <section id="team" class="bg-gray-200 flex items-center justify-center min-h-screen">
+      <div class="max-w-4xl mx-auto p-4 text-center">
+        <!-- Heading -->
+        <h1 class="text-4xl font-bold mb-12">Η ΟΜΑΔΑ ΜΑΣ</h1>
+
+        <!-- Image Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+          <div>
+            <img src="public/omada1.jpg" alt="Team Image 1" class="w-full h-auto mb-4 object-cover">
+          </div>
+          <div>
+            <img src="public/omada2.jpg" alt="Team Image 2" class="w-full h-auto mb-4 object-cover">
+          </div>
+          <div>
+            <img src="public/omada3.jpg" alt="Team Image 3" class="w-full h-auto mb-4 object-cover">
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center p-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-36 gap-y-4">
+            <p class="font-semibold">Συντονίστρια</p>
+            <p class="font-semibold">Υποσυντονίστρια</p>
+            <p>Άρτεμις Πονηρού</p>
+            <p>Άννα Κωστογλίδου</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-custom-dark">
+      <div class="container mx-auto p-8">
+
+        <!-- Logo and Title -->
+        <div class="text-center">
+          <div class="custom-logo-font">Μουσική</div>
+          <div class="custom-logo-font">Ο ήχος των συναισθημάτων</div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="contact-info">
+          <div class="contact-info-detail">Area, Fourka, Καστοριά 521 00</div>
+          <div class="contact-info-detail">Email</div>
+          <button class="contact-info-detail" onClick="copy()" id="email">mofkastorias@gmail.com</input>
+            <div class="contact-info-detail">Social</div>
+            <div class="social-icons">
+              <a href="https://www.instagram.com/mousiki_kastorias?igsh=MXZteWo1MjZraTVjNw==">
+                <span class="social-icon"><i class="fab fa-instagram"></i></span>
+              </a>
+            </div>
+        </div>
+
+        <!-- Powered By -->
+        <div class="powered-by-section">
+          <div class="contact-info-detail">POWERED BY</div>
+          <a href="https://www.uowm.gr/">
+            <img src="public/uowm-logo.png" alt="University of Western Macedonia" class="university-logo">
+          </a>
+        </div>
+
+        <!-- Footer Credits -->
+        <div class="footer-credits">
+          social media creator: Λαμπρινή Φραγκούλη<br>
+          website developers: Δημήτρης Παπακωνσταντίνου, Βαρβάρα Παναγιωτίδου
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Smooth scrolling between anchors -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Toggle sidebar on mobile
+    const menuToggle = document.getElementById('menu-toggle');
+    const sidebar = document.getElementById('sidebar');
+
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('-translate-x-full');
+    });
+
+    function copy() {
+      // Get the text field
+      var copyText = document.getElementById("email");
+
+      // Select the text field
+      copyText.select();
+      copyText.setSelectionRange(0, 99999); // For mobile devices
+
+      // Copy the text inside the text field
+      navigator.clipboard.writeText(copyText.value);
+
+      // Alert the copied text
+      alert("Copied the text: " + copyText.value);
+    } 
+  </script>
+
+</body>
+
+</html>

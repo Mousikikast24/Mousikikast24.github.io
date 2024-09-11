@@ -19,6 +19,10 @@
   font-family: 'Pacifico', cursive; /* Use a handwriting style font */
 }
 
+.custom-font {
+  font-family: 'GFS Neohellenic'; 
+}
+
 .custom-logo-font {
   @apply text-5xl font-handwriting text-custom-pink; /* Custom font size for the logo text */
 }
@@ -32,7 +36,7 @@
 }
 
 .contact-info {
-  @apply text-center mt-8; /* Center text with margin-top */
+  @apply custom-font text-center mt-8; /* Center text with margin-top */
 }
 
 .contact-info-title {
@@ -52,11 +56,11 @@
 }
 
 .footer-credits {
-  @apply text-center text-xs text-custom-white mt-12; /* Footer credits styling */
+  @apply text-center text-xs custom-font text-custom-white mt-12; /* Footer credits styling */
 }
 
 .powered-by-section {
-  @apply text-center mt-12; /* 'Powered by' section styling */
+  @apply text-center custom-font mt-12; /* 'Powered by' section styling */
 }
 
 .university-logo {

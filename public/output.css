@@ -844,6 +844,10 @@ video {
   /* Use a handwriting style font */
 }
 
+.custom-font {
+  font-family: 'GFS Neohellenic';
+}
+
 .custom-logo-font {
   font-size: 3rem;
   line-height: 1;
@@ -877,6 +881,7 @@ video {
 .contact-info {
   margin-top: 2rem;
   text-align: center;
+  font-family: 'GFS Neohellenic';
   /* Center text with margin-top */
 }
 
@@ -921,12 +926,14 @@ video {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
   /* White text color */
+  font-family: 'GFS Neohellenic';
   /* Footer credits styling */
 }
 
 .powered-by-section {
   margin-top: 3rem;
   text-align: center;
+  font-family: 'GFS Neohellenic';
   /* 'Powered by' section styling */
 }
 

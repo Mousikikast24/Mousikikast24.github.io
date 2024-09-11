@@ -43,7 +43,6 @@
       <a href="#contact" class="text-lg font-semibold hover:text-gray-400">Eπικοινωνία</a>
     </nav>
 
-
     <!-- Social Icons -->
     <div class="mt-auto p-4">
       <img src="public/omada_logo.jpg" class="omada-logo my-1" />
@@ -124,7 +123,7 @@
         <div class="contact-info">
           <div class="contact-info-detail">Area, Fourka, Καστοριά 521 00</div>
           <div class="contact-info-detail">Email</div>
-          <button class="contact-info-detail" onClick="copy()" id="email">mofkastorias@gmail.com</input>
+          <button class="contact-info-detail" onClick="copy()" id="email">mofkastorias@gmail.com</button>
             <div class="contact-info-detail">Social</div>
             <div class="social-icons">
               <a href="https://www.instagram.com/mousiki_kastorias?igsh=MXZteWo1MjZraTVjNw==">
@@ -159,6 +158,9 @@
         document.querySelector(this.getAttribute('href')).scrollIntoView({
           behavior: 'smooth'
         });
+        
+        // Close sidebar on mobile after clicking a link
+        sidebar.classList.add('-translate-x-full');
       });
     });
 
@@ -189,3 +191,4 @@
 </body>
 
 </html>
+

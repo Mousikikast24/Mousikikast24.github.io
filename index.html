@@ -58,8 +58,11 @@
   <main class="transition-all duration-300 ml-0 md:ml-64">
     <!-- Section with full image -->
     <div id="home" class="relative w-full h-screen md:h-auto overflow-hidden">
-      <img src="public/1.png" alt="Description of the image" class="w-full h-full object-cover">
+      <img srcset="public/mobile.png 414w, public/deskop.png 1366w"
+        sizes="(max-width: 414px) 414px, (min-width: 415px) 1366px" src="public/deskop.png"
+        class="w-full h-full object-cover" alt="Responsive image" />
     </div>
+
 
     <!-- About Us Section (ΓΙΑ ΕΜΑΣ) -->
     <section id="about" class="bg-gray-100 flex items-center justify-center min-h-screen">

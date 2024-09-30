@@ -37,7 +37,7 @@
 
     <!-- Navigation Links -->
     <nav class="flex flex-col p-4 space-y-6 custom-font">
-      <a href="#home" class="text-lg font-semibold hover:text-gray-400">Αρχική</a>
+      <a href="#slideshow" class="text-lg font-semibold hover:text-gray-400">Αρχική</a>
       <a href="#about" class="text-lg font-semibold hover:text-gray-400">Για εμάς</a>
       <a href="#team" class="text-lg font-semibold hover:text-gray-400">Η ομάδα μας</a>
       <a href="#contact" class="text-lg font-semibold hover:text-gray-400">Eπικοινωνία</a>
@@ -49,19 +49,52 @@
       <div class="flex justify-center space-x-4">
         <a href="https://www.instagram.com/mousiki_kastorias?igsh=MXZteWo1MjZraTVjNw==" class="hover:text-gray-400"><i
             class="fab fa-instagram"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=61565614233317" class="hover:text-gray-400"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61565614233317" class="hover:text-gray-400"><i
+            class="fab fa-facebook"></i></a>
       </div>
     </div>
   </aside>
 
   <!-- Main Content -->
   <main class="transition-all duration-300 ml-0 md:ml-64">
-    <!-- Section with full image -->
-    <div id="home" class="relative w-full h-screen md:h-auto overflow-hidden">
-      <img srcset="public/mobile.png 414w, public/deskop.png 1366w"
-        sizes="(max-width: 414px) 414px, (min-width: 415px) 1366px" src="public/deskop.png"
-        class="w-full h-full object-cover" alt="Responsive image" />
+    <!-- Image Slideshow -->
+    <div id="slideshow"
+      class="relative w-screen h-screen mx-auto overflow-hidden border-4 border-gray-200 rounded-lg shadow-lg">
+
+      <!-- Slide Images -->
+      <div class="slides absolute inset-0 opacity-0 transition-opacity duration-1000">
+        <img src="public/welcome_day.png" alt="Slide 1" class="w-full h-full object-cover" />
+        <!-- Slide 1 Text Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+        <div class="absolute inset-0 flex flex-col justify-end p-8 text-white text-center">
+          <h2 class="text-4xl font-bold mb-2">Welcome Day</h2>
+          <p class="text-lg">Join us for an amazing musical journey!</p>
+        </div>
+      </div>
+
+      <div class="slides absolute inset-0 opacity-0 transition-opacity duration-1000 hidden">
+        <img src="public/open_mic.png" alt="Slide 2" class="w-full h-full object-cover" />
+        <!-- Slide 2 Text Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+        <div class="absolute inset-0 flex flex-col justify-end p-8 text-white text-center">
+          <h2 class="text-4xl font-bold mb-2">Open Mic Night</h2>
+          <p class="text-lg">Share your talent with us on stage!</p>
+        </div>
+      </div>
+
+      <!-- Slideshow Navigation Controls -->
+      <button
+        class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white p-4 rounded-full hover:bg-gray-600 focus:outline-none prev-slide">
+        &#10094;
+      </button>
+      <button
+        class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white p-4 rounded-full hover:bg-gray-600 focus:outline-none next-slide">
+        &#10095;
+      </button>
     </div>
+
+
+
 
 
     <!-- About Us Section (ΓΙΑ ΕΜΑΣ) -->
@@ -135,7 +168,8 @@
           <div class="social-icons">
             <a href="https://www.instagram.com/mousiki_kastorias?igsh=MXZteWo1MjZraTVjNw==">
               <span class="social-icon"><i class="fab fa-instagram"></i></span>
-              <a href="https://www.facebook.com/profile.php?id=61565614233317" class="social-icon"><i class="fab fa-facebook"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=61565614233317" class="social-icon"><i
+                  class="fab fa-facebook"></i></a>
             </a>
           </div>
         </div>
@@ -178,6 +212,41 @@
     menuToggle.addEventListener('click', () => {
       sidebar.classList.toggle('-translate-x-full');
     });
+
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slides");
+
+    function showSlides() {
+      slides.forEach((slide, index) => {
+        slide.classList.remove("opacity-100", "block");
+        slide.classList.add("opacity-0", "hidden");
+      });
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
+      }
+      slides[slideIndex - 1].classList.remove("opacity-0", "hidden");
+      slides[slideIndex - 1].classList.add("opacity-100", "block");
+
+      setTimeout(showSlides, 5000); // Change slide every 5 seconds
+    }
+
+    // Next/previous controls
+    document.querySelector(".prev-slide").addEventListener("click", () => {
+      slideIndex -= 2;
+      if (slideIndex < 0) {
+        slideIndex = slides.length - 1;
+      }
+      showSlides();
+    });
+
+    document.querySelector(".next-slide").addEventListener("click", () => {
+      showSlides();
+    });
+
+    // Initialize slideshow
+    showSlides();
+
   </script>
 
 </body>

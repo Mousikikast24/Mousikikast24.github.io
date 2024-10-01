@@ -17,7 +17,7 @@
     rel="stylesheet">
 </head>
 
-<body class="scroll-smooth">
+<body class="scroll-smooth" onload="showNextSlide()">
 
   <!-- Mobile Navigation Toggle Button -->
   <div class="fixed top-0 left-0 p-4 z-50 md:hidden">
@@ -96,6 +96,7 @@
       </div>
 
     </div>
+
 
 
 
@@ -207,48 +208,65 @@
       });
     });
 
-    // Toggle sidebar on mobile
-    const menuToggle = document.getElementById('menu-toggle');
-    const sidebar = document.getElementById('sidebar');
-
-    menuToggle.addEventListener('click', () => {
-      sidebar.classList.toggle('-translate-x-full');
-    });
   </script>
 
-  <!-- Slideshow Script -->
   <script>
-    let slideIndex = 0;
-    const slides = document.querySelectorAll(".slides");
+    // Sidebar toggle for mobile
+    const menuToggle = document.getElementById("menu-toggle");
+    const sidebar = document.getElementById("sidebar");
+    menuToggle.addEventListener("click", function () {
+      sidebar.classList.toggle("-translate-x-full");
+    });
 
-    function showSlides() {
-      slides.forEach((slide, index) => {
-        slide.classList.remove("opacity-100", "block");
-        slide.classList.add("opacity-0", "hidden");
+    // Navigation Links Smooth Scrolling
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+
+        if (targetSection) {
+          window.scrollTo({
+            top: targetSection.offsetTop - 100,
+            behavior: 'smooth'
+          });
+        }
       });
-      slideIndex++;
-      if (slideIndex > slides.length) {
-        slideIndex = 1;
-      }
-      slides[slideIndex - 1].classList.remove("opacity-0", "hidden");
-      slides[slideIndex - 1].classList.add("opacity-100", "block");
+    });
 
-      setTimeout(showSlides, 5000); // Change slide every 5 seconds
+    // Slideshow functionality
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.slides');
+    const totalSlides = slides.length;
+    let interval = setInterval(showNextSlide, 2500);
+
+    function showNextSlide() {
+      slides[currentIndex].classList.remove('opacity-100');
+      slides[currentIndex].classList.add('opacity-0');
+      slides[currentIndex].classList.add('hidden');
+      currentIndex = (currentIndex + 1) % totalSlides;
+      slides[currentIndex].classList.remove('hidden');
+      slides[currentIndex].classList.add('opacity-100');
+      slides[currentIndex].classList.remove('opacity-0');
     }
 
-    // Next/previous controls
-    document.querySelector(".prev-slide").addEventListener("click", () => {
-      slideIndex -= 2;
-      if (slideIndex < 0) {slideIndex = slides.length - 1;}
-      showSlides();
-    });
-    document.querySelector(".next-slide").addEventListener("click", () => {
-      showSlides();
+    document.querySelector('.prev-slide').addEventListener('click', () => {
+      clearInterval(interval);  // Pause auto-slide
+      slides[currentIndex].classList.remove('opacity-100');
+      slides[currentIndex].classList.add('opacity-0');
+      slides[currentIndex].classList.add('hidden');
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      slides[currentIndex].classList.remove('hidden');
+      slides[currentIndex].classList.add('opacity-100');
+      slides[currentIndex].classList.remove('opacity-0');
+      interval = setInterval(showNextSlide, 5000); // Resume auto-slide
     });
 
-    // Initialize slideshow
-    showSlides();
-
+    document.querySelector('.next-slide').addEventListener('click', () => {
+      clearInterval(interval);  // Pause auto-slide
+      showNextSlide();  // Manually show next slide
+      interval = setInterval(showNextSlide, 2500);  // Resume auto-slide
+    });
   </script>
 
 </body>

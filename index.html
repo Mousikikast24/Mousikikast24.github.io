@@ -37,10 +37,10 @@
 
     <!-- Navigation Links -->
     <nav class="flex flex-col p-4 space-y-6 custom-font">
-      <a href="#slideshow" class="text-lg font-semibold hover:text-gray-400">Αρχική</a>
-      <a href="#about" class="text-lg font-semibold hover:text-gray-400">Για εμάς</a>
-      <a href="#team" class="text-lg font-semibold hover:text-gray-400">Η ομάδα μας</a>
-      <a href="#contact" class="text-lg font-semibold hover:text-gray-400">Eπικοινωνία</a>
+      <a href="#slideshow" class="nav-link text-lg font-semibold hover:text-gray-400">Αρχική</a>
+      <a href="#about" class="nav-link text-lg font-semibold hover:text-gray-400">Για εμάς</a>
+      <a href="#team" class="nav-link text-lg font-semibold hover:text-gray-400">Η ομάδα μας</a>
+      <a href="#contact" class="nav-link text-lg font-semibold hover:text-gray-400">Eπικοινωνία</a>
     </nav>
 
     <!-- Social Icons -->
@@ -59,16 +59,16 @@
   <main class="transition-all duration-300 ml-0 md:ml-64">
     <!-- Image Slideshow -->
     <div id="slideshow"
-      class="relative w-screen h-screen mx-auto overflow-hidden border-4 border-gray-200 rounded-lg shadow-lg">
+      class="relative w-full h-screen mx-auto overflow-hidden border-4 border-gray-200 rounded-lg shadow-lg">
 
       <!-- Slide Images -->
       <div class="slides absolute inset-0 opacity-0 transition-opacity duration-1000">
         <img src="public/welcome_day.png" alt="Slide 1" class="w-full h-full object-cover" />
         <!-- Slide 1 Text Overlay -->
         <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
-        <div class="absolute inset-0 flex flex-col justify-end p-8 text-white text-center">
-          <h2 class="text-4xl font-bold mb-2">Welcome Day</h2>
-          <p class="text-lg">Join us for an amazing musical journey!</p>
+        <div class="absolute inset-0 flex flex-col justify-end p-4 sm:p-8 text-white text-center">
+          <h2 class="text-2xl sm:text-4xl font-bold mb-2">Γνωρίστε την ομάδα μας! </h2>
+          <p class="text-sm sm:text-lg">Σας περιμένουμε στο Α' κτήριο του Πανεπιστημίου</p>
         </div>
       </div>
 
@@ -76,26 +76,22 @@
         <img src="public/open_mic.png" alt="Slide 2" class="w-full h-full object-cover" />
         <!-- Slide 2 Text Overlay -->
         <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
-        <div class="absolute inset-0 flex flex-col justify-end p-8 text-white text-center">
-          <h2 class="text-4xl font-bold mb-2">Open Mic Night</h2>
-          <p class="text-lg">Share your talent with us on stage!</p>
+        <div class="absolute inset-0 flex flex-col justify-end p-4 sm:p-8 text-white text-center">
+          <h2 class="text-2xl sm:text-4xl font-bold mb-2">Open Mic Night</h2>
+          <p class="text-sm sm:text-lg">Share your talent with us on stage!</p>
         </div>
       </div>
 
       <!-- Slideshow Navigation Controls -->
       <button
-        class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white p-4 rounded-full hover:bg-gray-600 focus:outline-none prev-slide">
+        class="absolute top-1/2 left-2 sm:left-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 sm:p-4 rounded-full hover:bg-gray-600 focus:outline-none prev-slide">
         &#10094;
       </button>
       <button
-        class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white p-4 rounded-full hover:bg-gray-600 focus:outline-none next-slide">
+        class="absolute top-1/2 right-2 sm:right-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 sm:p-4 rounded-full hover:bg-gray-600 focus:outline-none next-slide">
         &#10095;
       </button>
     </div>
-
-
-
-
 
     <!-- About Us Section (ΓΙΑ ΕΜΑΣ) -->
     <section id="about" class="bg-gray-100 flex items-center justify-center min-h-screen">
@@ -193,7 +189,7 @@
 
   <!-- Smooth scrolling between anchors -->
   <script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    document.querySelectorAll('a.nav-link').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
         document.querySelector(this.getAttribute('href')).scrollIntoView({
@@ -212,7 +208,10 @@
     menuToggle.addEventListener('click', () => {
       sidebar.classList.toggle('-translate-x-full');
     });
+  </script>
 
+  <!-- Slideshow Script -->
+  <script>
     let slideIndex = 0;
     const slides = document.querySelectorAll(".slides");
 
@@ -234,12 +233,9 @@
     // Next/previous controls
     document.querySelector(".prev-slide").addEventListener("click", () => {
       slideIndex -= 2;
-      if (slideIndex < 0) {
-        slideIndex = slides.length - 1;
-      }
+      if (slideIndex < 0) {slideIndex = slides.length - 1;}
       showSlides();
     });
-
     document.querySelector(".next-slide").addEventListener("click", () => {
       showSlides();
     });

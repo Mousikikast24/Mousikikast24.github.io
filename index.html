@@ -66,7 +66,6 @@
         <!-- Slide Images -->
         <div class="slides absolute inset-0 opacity-0 transition-opacity duration-1000">
           <img src="imgs/prova.png" alt="Slide 1" class="w-full h-full object-cover" />
-          <!-- Slide 1 Text Overlay -->
           <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
           <div class="absolute inset-0 flex flex-col justify-end p-4 text-white text-center">
             <h2 class="text-2xl sm:text-4xl font-bold mb-2">Πρόβα Ομάδας</h2>
@@ -74,124 +73,135 @@
           </div>
         </div>
 
-        <div class="slides absolute inset-0 opacity-0 transition-opacity duration-1000 hidden">
-          <img src="imgs/day_photos.png" alt="Slide 2" class="w-full h-full object-cover" />
-          <!-- Slide 2 Text Overlay -->
-          <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
-          <div class="absolute inset-0 flex flex-col justify-end p-4 text-white text-center">
-            <h2 class="text-2xl sm:text-4xl font-bold mb-2">Welcome Day</h2>
-            <p class="text-sm sm:text-lg">Στιγμιότυπα από το περίπτερο της ομάδας μας στο Welcome Day</p>
-          </div>
-        </div>
+        <div id="slideshow" class="relative w-full h-[30rem] sm:h-[35rem] overflow-hidden rounded-lg">
 
-        <!-- Slideshow Navigation Controls -->
-        <button
-          class="absolute top-1/2 left-2 sm:left-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 sm:p-4 rounded-full hover:bg-gray-600 focus:outline-none prev-slide">
-          &#10094;
-        </button>
-        <button
-          class="absolute top-1/2 right-2 sm:right-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 sm:p-4 rounded-full hover:bg-gray-600 focus:outline-none next-slide">
-          &#10095;
-        </button>
-      </div>
-
-    </div>
-
-
-
-
-    <!-- About Us Section (ΓΙΑ ΕΜΑΣ) -->
-    <section id="about" class="bg-gray-100 flex items-center justify-center min-h-screen">
-      <div class="max-w-2xl mx-auto p-4 text-center">
-        <!-- Heading -->
-        <h1 class="text-4xl font-bold mb-8 custom-font">Για εμάς</h1>
-
-        <!-- Paragraph -->
-        <p class="text-lg leading-relaxed text-justify custom-font">
-          Η Μουσική Ομάδα Καστοριάς ιδρύθηκε τον Οκτώβριο του 2023. Δημιουργήθηκε με αγάπη και μεράκι, με την ελπίδα
-          να φέρει κοντά τους φοιτητές όλων των τμημάτων του Πανεπιστημίου που ασχολούνται με την μουσική, κι όχι
-          μόνο. Κύριος στόχος της είναι ο εμπλουτισμός γνώσεων, η όξυνση της μουσικής αντίληψης και η εξερεύνηση
-          διαφόρων ειδών μουσικής, ούτως ώστε κάθε μέλος της να μπορέσει να φέρει στην επιφάνεια όλες τις
-          καλλιτεχνικές πτυχές που κρύβει μέσα του. Αυτό μπορεί να επιτευχθεί μόνο μέσα σε ένα ευχάριστο,
-          υποστηρικτικό, αρμονικό και συνεργατικό περιβάλλον, το οποίο αποτελεί και το κύριο θεμέλιο της ομάδας μας.
-        </p>
-      </div>
-    </section>
-
-    <!-- Our Team Section (Η ΟΜΑΔΑ ΜΑΣ) -->
-    <section id="team" class="bg-gray-200 flex items-center justify-center min-h-screen">
-      <div class="max-w-4xl mx-auto p-4 text-center">
-        <!-- Heading -->
-        <h1 class="text-4xl font-bold mb-12 custom-font">Η ομάδα μας</h1>
-
-        <!-- Image Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
-          <div>
-            <img src="imgs/omada1.jpg" alt="Team Image 1" class="w-full h-auto mb-4 object-cover">
-          </div>
-          <div>
-            <img src="imgs/omada2.jpg" alt="Team Image 2" class="w-full h-auto mb-4 object-cover">
-          </div>
-          <div>
-            <img src="imgs/omada3.jpg" alt="Team Image 3" class="w-full h-auto mb-4 object-cover">
-          </div>
-        </div>
-
-        <div class="flex items-center justify-center p-4">
-          <div class="custom-font grid grid-cols-1 sm:grid-cols-2 gap-x-36 gap-y-4">
-            <div>
-              <p class="font-semibold">Συντονίστρια</p>
-              <p>Άρτεμις Πονηρού</p>
-            </div>
-            <div>
-              <p class="font-semibold">Υποσυντονίστρια</p>
-              <p>Άννα Κωστογλίδου</p>
+          <!-- Slide Images -->
+          <div class="slides absolute inset-0 opacity-0 transition-opacity duration-1000">
+            <img src="imgs/mamouth.jpg" alt="Slide 1" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+            <div class="absolute inset-0 flex flex-col justify-end p-4 text-white text-center">
+              <h2 class="text-2xl sm:text-4xl font-bold mb-2">Βραδία στο Μαμούθ</h2>
+              <p class="text-sm sm:text-lg">Σας ευχαριστούμε για την υπέροχη βραδία.</p>
             </div>
           </div>
+
+          <div class="slides absolute inset-0 opacity-0 transition-opacity duration-1000 hidden">
+            <img src="imgs/day_photos.png" alt="Slide 2" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+            <div class="absolute inset-0 flex flex-col justify-end p-4 text-white text-center">
+              <h2 class="text-2xl sm:text-4xl font-bold mb-2">Welcome Day</h2>
+              <p class="text-sm sm:text-lg">Στιγμιότυπα από το περίπτερο της ομάδας μας στο Welcome Day</p>
+            </div>
+          </div>
+
+          <!-- Slideshow Navigation Controls -->
+          <button
+            class="absolute top-1/2 left-2 sm:left-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 sm:p-4 rounded-full hover:bg-gray-600 focus:outline-none prev-slide">
+            &#10094;
+          </button>
+          <button
+            class="absolute top-1/2 right-2 sm:right-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 sm:p-4 rounded-full hover:bg-gray-600 focus:outline-none next-slide">
+            &#10095;
+          </button>
         </div>
+
       </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="bg-custom-dark">
-      <div class="container mx-auto p-8">
 
-        <!-- Logo and Title -->
-        <div class="text-center sm: text-xl">
-          <div class="custom-logo-font">Μουσική</div>
-          <div class="custom-logo-font">Ο ήχος των συναισθημάτων</div>
+
+
+      <!-- About Us Section (ΓΙΑ ΕΜΑΣ) -->
+      <section id="about" class="bg-gray-100 flex items-center justify-center min-h-screen">
+        <div class="max-w-2xl mx-auto p-4 text-center">
+          <!-- Heading -->
+          <h1 class="text-4xl font-bold mb-8 custom-font">Για εμάς</h1>
+
+          <!-- Paragraph -->
+          <p class="text-lg leading-relaxed text-justify custom-font">
+            Η Μουσική Ομάδα Καστοριάς ιδρύθηκε τον Οκτώβριο του 2023. Δημιουργήθηκε με αγάπη και μεράκι, με την ελπίδα
+            να φέρει κοντά τους φοιτητές όλων των τμημάτων του Πανεπιστημίου που ασχολούνται με την μουσική, κι όχι
+            μόνο. Κύριος στόχος της είναι ο εμπλουτισμός γνώσεων, η όξυνση της μουσικής αντίληψης και η εξερεύνηση
+            διαφόρων ειδών μουσικής, ούτως ώστε κάθε μέλος της να μπορέσει να φέρει στην επιφάνεια όλες τις
+            καλλιτεχνικές πτυχές που κρύβει μέσα του. Αυτό μπορεί να επιτευχθεί μόνο μέσα σε ένα ευχάριστο,
+            υποστηρικτικό, αρμονικό και συνεργατικό περιβάλλον, το οποίο αποτελεί και το κύριο θεμέλιο της ομάδας μας.
+          </p>
         </div>
+      </section>
 
-        <!-- Contact Information -->
-        <div class="contact-info">
-          <div class="contact-info-detail">Area, Fourka, Καστοριά 521 00</div>
-          <div class="contact-info-detail">Email</div>
-          <p class="contact-info-detail" onClick="copy()" id="email">mofkastorias@gmail.com</p>
-          <div class="contact-info-detail">Social</div>
-          <div class="social-icons">
-            <a href="https://www.instagram.com/mousiki_kastorias?igsh=MXZteWo1MjZraTVjNw==">
-              <span class="social-icon"><i class="fab fa-instagram"></i></span>
-              <a href="https://www.facebook.com/profile.php?id=61565614233317" class="social-icon"><i
-                  class="fab fa-facebook"></i></a>
+      <!-- Our Team Section (Η ΟΜΑΔΑ ΜΑΣ) -->
+      <section id="team" class="bg-gray-200 flex items-center justify-center min-h-screen">
+        <div class="max-w-4xl mx-auto p-4 text-center">
+          <!-- Heading -->
+          <h1 class="text-4xl font-bold mb-12 custom-font">Η ομάδα μας</h1>
+
+          <!-- Image Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+            <div>
+              <img src="imgs/omada1.jpg" alt="Team Image 1" class="w-full h-auto mb-4 object-cover">
+            </div>
+            <div>
+              <img src="imgs/omada2.jpg" alt="Team Image 2" class="w-full h-auto mb-4 object-cover">
+            </div>
+            <div>
+              <img src="imgs/omada3.jpg" alt="Team Image 3" class="w-full h-auto mb-4 object-cover">
+            </div>
+          </div>
+
+          <div class="flex items-center justify-center p-4">
+            <div class="custom-font grid grid-cols-1 sm:grid-cols-2 gap-x-36 gap-y-4">
+              <div>
+                <p class="font-semibold">Συντονίστρια</p>
+                <p>Άρτεμις Πονηρού</p>
+              </div>
+              <div>
+                <p class="font-semibold">Υποσυντονίστρια</p>
+                <p>Άννα Κωστογλίδου</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="bg-custom-dark">
+        <div class="container mx-auto p-8">
+
+          <!-- Logo and Title -->
+          <div class="text-center sm: text-xl">
+            <div class="custom-logo-font">Μουσική</div>
+            <div class="custom-logo-font">Ο ήχος των συναισθημάτων</div>
+          </div>
+
+          <!-- Contact Information -->
+          <div class="contact-info">
+            <div class="contact-info-detail">Area, Fourka, Καστοριά 521 00</div>
+            <div class="contact-info-detail">Email</div>
+            <p class="contact-info-detail" onClick="copy()" id="email">mofkastorias@gmail.com</p>
+            <div class="contact-info-detail">Social</div>
+            <div class="social-icons">
+              <a href="https://www.instagram.com/mousiki_kastorias?igsh=MXZteWo1MjZraTVjNw==">
+                <span class="social-icon"><i class="fab fa-instagram"></i></span>
+                <a href="https://www.facebook.com/profile.php?id=61565614233317" class="social-icon"><i
+                    class="fab fa-facebook"></i></a>
+              </a>
+            </div>
+          </div>
+
+          <!-- Powered By -->
+          <div class="powered-by-section">
+            <div class="contact-info-detail">POWERED BY</div>
+            <a href="https://www.uowm.gr/">
+              <img src="imgs/uowm-logo.png" alt="University of Western Macedonia" class="university-logo">
             </a>
           </div>
-        </div>
 
-        <!-- Powered By -->
-        <div class="powered-by-section">
-          <div class="contact-info-detail">POWERED BY</div>
-          <a href="https://www.uowm.gr/">
-            <img src="imgs/uowm-logo.png" alt="University of Western Macedonia" class="university-logo">
-          </a>
+          <!-- Footer Credits -->
+          <div class="footer-credits">
+            social media creator: Λαμπρινή Φραγκούλη<br>
+            website developers: Δημήτρης Παπακωνσταντίνου, Βαρβάρα Παναγιωτίδου
+          </div>
         </div>
-
-        <!-- Footer Credits -->
-        <div class="footer-credits">
-          social media creator: Λαμπρινή Φραγκούλη<br>
-          website developers: Δημήτρης Παπακωνσταντίνου, Βαρβάρα Παναγιωτίδου
-        </div>
-      </div>
-    </section>
+      </section>
   </main>
 
   <script src="src/index.js"></script>

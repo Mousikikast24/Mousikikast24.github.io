@@ -974,8 +974,7 @@ video {
   --tw-text-opacity: 1;
   color: rgb(236 72 153 / var(--tw-text-opacity));
   /* Pink text color */
-  font-family: 'Pacifico', cursive;
-  /* Use a handwriting style font */
+  font-family: 'GFS Neohellenic';
   /* Custom font size for the logo text */
 }
 

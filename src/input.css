@@ -24,7 +24,7 @@
 }
 
 .custom-logo-font {
-  @apply text-5xl font-handwriting text-custom-pink; /* Custom font size for the logo text */
+  @apply text-5xl custom-font text-custom-pink; /* Custom font size for the logo text */
 }
 
 .custom-subtitle-font {

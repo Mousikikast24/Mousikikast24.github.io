@@ -45,7 +45,7 @@
 
     <!-- Social Icons -->
     <div class="mt-auto p-4">
-      <img src="public/omada_logo.jpg" class="omada-logo my-1" />
+      <img src="imgs/omada_logo.jpg" class="omada-logo my-1" />
       <div class="flex justify-center space-x-4">
         <a href="https://www.instagram.com/mousiki_kastorias?igsh=MXZteWo1MjZraTVjNw==" class="hover:text-gray-400"><i
             class="fab fa-instagram"></i></a>
@@ -65,7 +65,7 @@
 
         <!-- Slide Images -->
         <div class="slides absolute inset-0 opacity-0 transition-opacity duration-1000">
-          <img src="public/open_mic2.png" alt="Slide 1" class="w-full h-full object-cover" />
+          <img src="imgs/open_mic2.png" alt="Slide 1" class="w-full h-full object-cover" />
           <!-- Slide 1 Text Overlay -->
           <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
           <div class="absolute inset-0 flex flex-col justify-end p-4 text-white text-center">
@@ -75,7 +75,7 @@
         </div>
 
         <div class="slides absolute inset-0 opacity-0 transition-opacity duration-1000 hidden">
-          <img src="public/day_photos.png" alt="Slide 2" class="w-full h-full object-cover" />
+          <img src="imgs/day_photos.png" alt="Slide 2" class="w-full h-full object-cover" />
           <!-- Slide 2 Text Overlay -->
           <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
           <div class="absolute inset-0 flex flex-col justify-end p-4 text-white text-center">
@@ -127,13 +127,13 @@
         <!-- Image Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
           <div>
-            <img src="public/omada1.jpg" alt="Team Image 1" class="w-full h-auto mb-4 object-cover">
+            <img src="imgs/omada1.jpg" alt="Team Image 1" class="w-full h-auto mb-4 object-cover">
           </div>
           <div>
-            <img src="public/omada2.jpg" alt="Team Image 2" class="w-full h-auto mb-4 object-cover">
+            <img src="imgs/omada2.jpg" alt="Team Image 2" class="w-full h-auto mb-4 object-cover">
           </div>
           <div>
-            <img src="public/omada3.jpg" alt="Team Image 3" class="w-full h-auto mb-4 object-cover">
+            <img src="imgs/omada3.jpg" alt="Team Image 3" class="w-full h-auto mb-4 object-cover">
           </div>
         </div>
 
@@ -181,7 +181,7 @@
         <div class="powered-by-section">
           <div class="contact-info-detail">POWERED BY</div>
           <a href="https://www.uowm.gr/">
-            <img src="public/uowm-logo.png" alt="University of Western Macedonia" class="university-logo">
+            <img src="imgs/uowm-logo.png" alt="University of Western Macedonia" class="university-logo">
           </a>
         </div>
 
@@ -194,80 +194,8 @@
     </section>
   </main>
 
-  <!-- Smooth scrolling between anchors -->
-  <script>
-    document.querySelectorAll('a.nav-link').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-
-        // Close sidebar on mobile after clicking a link
-        sidebar.classList.add('-translate-x-full');
-      });
-    });
-
-  </script>
-
-  <script>
-    // Sidebar toggle for mobile
-    const menuToggle = document.getElementById("menu-toggle");
-    const sidebar = document.getElementById("sidebar");
-    menuToggle.addEventListener("click", function () {
-      sidebar.classList.toggle("-translate-x-full");
-    });
-
-    // Navigation Links Smooth Scrolling
-    document.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(targetId);
-
-        if (targetSection) {
-          window.scrollTo({
-            top: targetSection.offsetTop - 100,
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-
-    // Slideshow functionality
-    let currentIndex = 0;
-    const slides = document.querySelectorAll('.slides');
-    const totalSlides = slides.length;
-    let interval = setInterval(showNextSlide, 2500);
-
-    function showNextSlide() {
-      slides[currentIndex].classList.remove('opacity-100');
-      slides[currentIndex].classList.add('opacity-0');
-      slides[currentIndex].classList.add('hidden');
-      currentIndex = (currentIndex + 1) % totalSlides;
-      slides[currentIndex].classList.remove('hidden');
-      slides[currentIndex].classList.add('opacity-100');
-      slides[currentIndex].classList.remove('opacity-0');
-    }
-
-    document.querySelector('.prev-slide').addEventListener('click', () => {
-      clearInterval(interval);  // Pause auto-slide
-      slides[currentIndex].classList.remove('opacity-100');
-      slides[currentIndex].classList.add('opacity-0');
-      slides[currentIndex].classList.add('hidden');
-      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-      slides[currentIndex].classList.remove('hidden');
-      slides[currentIndex].classList.add('opacity-100');
-      slides[currentIndex].classList.remove('opacity-0');
-      interval = setInterval(showNextSlide, 5000); // Resume auto-slide
-    });
-
-    document.querySelector('.next-slide').addEventListener('click', () => {
-      clearInterval(interval);  // Pause auto-slide
-      showNextSlide();  // Manually show next slide
-      interval = setInterval(showNextSlide, 2500);  // Resume auto-slide
-    });
-  </script>
+  <script src="src/index.js"></script>
+  <script src="src/smooth.js"></script>
 
 </body>
 
